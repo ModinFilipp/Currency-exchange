@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ConverterFragment">
+
+    <AutoCompleteTextView
+        android:id="@+id/val1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="валюта"
+        android:inputType="text"
+        android:shadowColor="#4D777777"
+        android:textColor="@color/white"
+        android:textColorHighlight="#4D777777"
+        android:textColorHint="#919191"
+        android:textColorLink="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Выберите валюты"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kol1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="кол-во"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="#4D777777"
+        android:textColorHint="#919191"
+        android:textColorLink="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/val1"
+        app:layout_constraintStart_toStartOf="@+id/val1"
+        app:layout_constraintTop_toBottomOf="@+id/val1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/kol1"
+        app:layout_constraintStart_toStartOf="@+id/kol1"
+        app:layout_constraintTop_toBottomOf="@+id/kol1"
+        app:lottie_fileName="animation_convert.json" />
+
+    <AutoCompleteTextView
+        android:id="@+id/val2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="валюта"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHighlight="#4D777777"
+        android:textColorHint="#919191"
+        android:textColorLink="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/val1"
+        app:layout_constraintStart_toStartOf="@+id/val1"
+        app:layout_constraintTop_toBottomOf="@+id/anim" />
+
+    <TextView
+        android:id="@+id/kol2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/kol1"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/kol1"
+        app:layout_constraintTop_toBottomOf="@+id/val2" />
+
+    <Button
+        android:id="@+id/bConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="обменять"
+        android:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/kol2"
+        app:layout_constraintStart_toStartOf="@+id/kol2"
+        app:layout_constraintTop_toBottomOf="@+id/kol2" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="очистить"
+        android:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/bConvert"
+        app:layout_constraintStart_toStartOf="@+id/bConvert"
+        app:layout_constraintTop_toBottomOf="@+id/bConvert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
